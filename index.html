@@ -8,7 +8,7 @@
     <style>
       body {
         color: rgb(60, 60, 60);
-        background-color: rgb(37, 37, 47);
+        background-color: rgb(36, 33, 42);
       }
       .centered {
         position: fixed;
@@ -16,9 +16,17 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+      #logo{
+        animation: fade 3s infinite ease-in-out;
+        animation-direction: alternate;
+      }
+      @keyframes fade {
+        0% {opacity: 1;}
+        20% {opacity: 1;}
+        100% {opacity: 0;}
+      }
     </style>
   </head>
  
-<img src="SmartLock_Logo_v2_HD.png" alt="SmartLock_Logo" class="centered" width="479px" height="389px">
-
+<img src="SmartLock_Logo_v2_HD.png" alt="SmartLock_Logo" id="logo" class="centered" style="position: absolute; z-index: 1" width="300px" height="240px">
 </html>
