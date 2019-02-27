@@ -1,4 +1,6 @@
-const sectionNames = ["home", "about"];
+
+/* Section Button Scripts */
+const sectionNames = ["home", "about"]; // <-- Add Buttons Here
 const sections = {}, sectionButtons = {};
 
 sectionNames.forEach(function(name){
@@ -20,11 +22,9 @@ const showSection = function(sectionName)
 
 for (let button in sectionButtons) {
     console.log(button);
-    sectionButtons[button].onclick = function() { showSection(button); console.log("Hello World") }
+    sectionButtons[button].onclick = function() { showSection(button); console.log("Click") }
 }
 
 window.setTimeout(function(){
-    console.log("Hi");
     showSection("about");
-    console.log("Bye");
 }, 3000);
