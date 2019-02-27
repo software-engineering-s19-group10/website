@@ -1,0 +1,30 @@
+@keyframes fade {
+  0% {opacity: 1;}
+  20% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+body {
+  color: rgb(60, 60, 60);
+  background-color: rgb(36, 33, 42);
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logo {
+  animation: fade 3s infinite ease-in-out;
+  animation-direction: alternate;
+}
+
+.hidden-section {
+  display: none;
+}
+
+nav span {
+  color: white;
+}

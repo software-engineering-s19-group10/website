@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="shortcut icon" href="SmartLock_NoText_Logo_v2.png" type="image/png">
-    <title>Coming Soon...</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      body {
-        color: rgb(60, 60, 60);
-        background-color: rgb(41, 41, 51);
-      }
-      .centered {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      #logo{
-        animation: fade 3s infinite ease-in-out;
-        animation-direction: alternate;
-      }
-      @keyframes fade {
-        0% {opacity: 1;}
-        20% {opacity: 1;}
-        100% {opacity: 0;}
-      }
-    </style>
-  </head>
+
+<head>
+  <link rel="shortcut icon" href="SmartLock_NoText_Logo_v2.png" type="image/png">
+  <title>Coming Soon...</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel ="stylesheet" href="styles.css">
+</head>
  
-<img src="SmartLock_Logo_v2_HD.png" alt="SmartLock_Logo" id="logo" class="centered" style="position: absolute; z-index: 1" width="300px" height="240px">
+<body>
+  <nav>
+    <span id="button-home">Home</span>
+    <span id="button-about">About Us</span>
+    <span>Contact</span>
+  </nav>
+  <main>
+    <div id="section-home">
+      <img src="SmartLock_Logo_v2_HD.png" alt="SmartLock_Logo" id="logo" class="centered" style="position: absolute; z-index: 1" width="300px" height="240px">
+    </div>
+    <div id="section-about" class="hidden-section">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+
 </html>
