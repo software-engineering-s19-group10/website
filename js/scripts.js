@@ -1,6 +1,6 @@
 
 /* Section Button Scripts */
-const sectionNames = ["home", "about"]; // <-- Add Buttons Here
+const sectionNames = ["home", "about", "help", "load"]; // <-- Add Buttons Here
 const sections = {}, sectionButtons = {};
 
 sectionNames.forEach(function(name){
@@ -26,5 +26,5 @@ for (let button in sectionButtons) {
 }
 
 window.setTimeout(function(){
-    showSection("about");
+    showSection("home");
 }, 3000);

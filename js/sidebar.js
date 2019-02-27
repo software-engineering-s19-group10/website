@@ -4,6 +4,7 @@
 
     var nav = $('nav'),
       menu = $('nav h1'),
+      tab = $('nav li'),
       main = $('main'),
         open = false,
         hover = false;
@@ -16,6 +17,16 @@
       main.removeClass('menu-hover');
       console.log(open);
     });
+
+    tab.on('click', function() { /* My added code */
+      open = !open ? true : false;
+      nav.toggleClass('menu-active');
+      main.toggleClass('menu-active');
+      nav.removeClass('menu-hover');
+      main.removeClass('menu-hover');
+      console.log(open);
+    });
+
     menu.hover( 
       function() {
         if (!open) {
