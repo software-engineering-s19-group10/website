@@ -22,3 +22,9 @@ for (let button in sectionButtons) {
     console.log(button);
     sectionButtons[button].onclick = function() { showSection(button); console.log("Hello World") }
 }
+
+window.setTimeout(function(){
+    console.log("Hi");
+    showSection("about");
+    console.log("Bye");
+}, 3000);
