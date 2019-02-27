@@ -4,7 +4,7 @@
 
     var nav = $('nav'),
       menu = $('nav h1'),
-      tab = $('nav li'),
+      tab = $('nav li'), // My added line
       main = $('main'),
         open = false,
         hover = false;
@@ -25,7 +25,7 @@
       nav.removeClass('menu-hover');
       main.removeClass('menu-hover');
       console.log(open);
-    });
+    }); /* Up to here */
 
     menu.hover( 
       function() {
