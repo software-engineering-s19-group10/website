@@ -1,42 +1,46 @@
-
 /* SIDEBAR - By: https://codepen.io/jscottsmith/ */
-(function() {
 
-    var nav = $('nav'),
-      menu = $('nav h1'),
-      tab = $('nav li'), // My added line
-      main = $('main'),
-        open = false,
-        hover = false;
-  
-    menu.on('click', function() {
-          open = !open ? true : false;
-      nav.toggleClass('menu-active');
-      main.toggleClass('menu-active');
-      nav.removeClass('menu-hover');
-      main.removeClass('menu-hover');
-      console.log(open);
-    });
+const nav = document.getElementsByTagName("nav")[0],
+      menu = nav.getElementsByTagName("h1")[0],
+      main = document.getElementsByTagName("main")[0]
+      menuItems = nav.getElementsByTagName("li");
 
-    tab.on('click', function() { /* My added code */
-      open = !open ? true : false;
-      nav.toggleClass('menu-active');
-      main.toggleClass('menu-active');
-      nav.removeClass('menu-hover');
-      main.removeClass('menu-hover');
-      console.log(open);
-    }); /* Up to here */
+let open = false;
 
-    menu.hover( 
-      function() {
-        if (!open) {
-            nav.addClass('menu-hover');
-            main.addClass('menu-hover');
-        }
-      }, function() {
-        nav.removeClass('menu-hover');
-        main.removeClass('menu-hover');
-      }
-    );
-  
-  })();
+for (let i = 0; i < menuItems.length; i++) {
+  let menuItem = menuItems[i];
+
+  console.log(menuItem);
+
+  menuItem.addEventListener("click", function() {
+    console.log("clicked");
+    open = !open ? true : false;
+    nav.classList.toggle('menu-active');
+    main.classList.toggle('menu-active');
+    nav.classList.remove('menu-hover');
+    main.classList.remove('menu-hover');
+    console.log(open);
+  });
+}
+
+menu.onclick = function() {
+  open = !open ? true : false;
+  nav.classList.toggle('menu-active');
+  main.classList.toggle('menu-active');
+  nav.classList.remove('menu-hover');
+  main.classList.remove('menu-hover');
+  console.log(open);
+};
+
+menu.onmouseenter = function() {
+  if (!open) {
+      nav.classList.add('menu-hover');
+      main.classList.add('menu-hover');
+  }
+};
+
+menu.onmouseleave = function() {
+  nav.classList.remove('menu-hover');
+  main.classList.remove('menu-hover');
+};
+

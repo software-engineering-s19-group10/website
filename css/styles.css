@@ -1,20 +1,11 @@
-
 body {
   color: rgb(25, 25, 25);
   background-color: rgb(36, 33, 42);
 }
 
-
-/* Logo */
-@keyframes fade {
-  0% {opacity: 1;}
-  20% {opacity: 1;}
-  100% {opacity: 0;}
-}
-
 #logo {
-  animation: fade 3s infinite ease-in-out;
-  animation-direction: alternate;
+  /* When we change the opacity, transition to the new value */
+  transition: opacity 2s ease-out;
 }
 
 .centered {
