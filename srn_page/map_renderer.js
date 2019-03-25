@@ -76,7 +76,7 @@ $(document).ready(function() {
 
             // the api url to get data
             // replace this with whatever we use
-            let dataURL = "http://127.0.0.1:8000/lock_owners/api/srn/";
+            let dataURL = "http://1c1a85bf.ngrok.io/lock_owners/api/srn/";
             
             $.ajax({
                 url: dataURL,
